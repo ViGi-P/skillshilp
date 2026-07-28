@@ -2,7 +2,7 @@
   <img src="banner.png" alt="skillshilp banner">
 </p>
 
-<h1 align="center">Skillshilp (Skillशिल्प)</h1>
+<h1 align="center">SKILLशिल्प (SKILLSHILP)</h1>
 
 <p align="center">
 Build Better Agent Skills.
