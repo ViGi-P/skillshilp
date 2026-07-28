@@ -1,67 +1,98 @@
 <p align="center">
-  <img src="banner.png" alt="Skillsmith Banner">
+  <img src="banner.png" alt="skillshilp banner">
 </p>
 
-<h1 align="center">Skillsmith</h1>
+<h1 align="center">Skillshilp (Skillशिल्प)</h1>
 
 <p align="center">
-Design Production-Quality Agent Skills.
+Build Better Agent Skills.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/ViGi-P/skillsmith?style=for-the-badge" alt="License">
-  <img src="https://img.shields.io/github/v/release/ViGi-P/skillsmith?style=for-the-badge" alt="Release">
-  <img src="https://img.shields.io/github/stars/ViGi-P/skillsmith?style=for-the-badge" alt="Stars">
+  <img src="https://img.shields.io/github/license/ViGi-P/skillshilp?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/github/v/release/ViGi-P/skillshilp?style=for-the-badge" alt="Release">
+  <img src="https://img.shields.io/github/stars/ViGi-P/skillshilp?style=for-the-badge" alt="Stars">
 </p>
 
-Skillsmith is an open-source Agent Skill that helps AI agents design, review, and generate high-quality skills following the official [Agent Skills specification](https://agentskills.io).
+**Skillshilp** is an open-source collection of meta-skills for creating, reviewing, and maintaining production-quality Agent Skills that follow the official [Agent Skills specification](https://agentskills.io).
 
-Rather than focusing solely on generating `SKILL.md` files, Skillsmith emphasizes software engineering principles such as modularity, progressive disclosure, single responsibility, maintainability, and token efficiency.
+Rather than simply generating `SKILL.md` files, skillshilp applies proven software engineering principles—such as modularity, progressive disclosure, single responsibility, maintainability, and token efficiency—to help produce skills that remain easy to understand, evolve, and reuse.
 
-## **Features**
+## Features
 
-* 🏗️ Designs reusable, production-quality Agent Skills
-* 📦 Encourages modular architecture and progressive disclosure
-* 🔍 Reviews skills for common design issues before returning them
-* 📚 Includes concise reference material for validation and design patterns
+* 🏗️ Design production-quality Agent Skills from ideas, prompts, and specifications
+* 🛠️ Review and refactor existing Agent Skills while preserving their intent
+* 📦 Encourage modular architecture and progressive disclosure
+* 🔍 Detect common design issues and architectural anti-patterns
+* 📚 Include concise reference material for validation and best practices
 * ⚡ Optimized for low token usage without sacrificing capability
 
-## **Install**
+## Included Skills
+
+### 1. `skillshilp-create`
+
+> Designs new production-quality Agent Skills from ideas, requirements, reusable prompts, or specifications. It's architectural and generative: it designs new skills and collections from first principles.
+
+### 2. `skillshilp-edit`
+
+> Reviews, refactors, and improves existing Agent Skills while preserving their intended behaviour and architecture. It's incremental and conservative: it evolves existing skills while preserving their contracts.
+
+## Installation
 
 ### npx skills
+
 ```bash
-npx skills@latest add ViGi-P/skillsmith
+npx skills@latest add ViGi-P/skillshilp
 ```
+
 ### GitHub Skills
+
 ```bash
-gh skill install ViGi-P/skillsmith
+gh skill install ViGi-P/skillshilp
 ```
 
-## **Usage**
+## When to Use
 
-When activated, Skillsmith helps agents:
+Use **skillshilp-create** when you want to:
 
-* create new skills
-* refactor existing skills
-* review skill architecture
-* organize supporting documentation
-* apply progressive disclosure
-* improve maintainability and discoverability
+* create a new Agent Skill
+* convert a reusable prompt into a skill
+* design a modular skill collection
+* architect a new skill from requirements
 
-## **Repository Structure**
+Use **skillshilp-edit** when you want to:
 
+* improve an existing skill
+* refactor skill architecture
+* modernize documentation
+* simplify prompts
+* review a skill against current best practices
+
+## Repository Structure
+
+```text
+skillshilp/
+└── skills/
+    ├── skillshilp-create/
+    │   ├── SKILL.md
+    │   ├── README.md
+    │   └── references/
+    │       ├── constraints.md
+    │       ├── patterns.md
+    │       └── skill-smells.md
+    │
+    └── skillshilp-edit/
+        ├── SKILL.md
+        ├── README.md
+        └── references/
+            ├── constraints.md
+            ├── patterns.md
+            └── skill-smells.md
 ```
-skillsmith/
-├── SKILL.md
-└── references/
-    ├── constraints.md
-    ├── patterns.md
-    └── skill-smells.md
-```
 
-## **Philosophy**
+## Philosophy
 
-A good skill should be:
+Every Agent Skill should strive to be:
 
 * Reusable
 * Discoverable
@@ -71,28 +102,10 @@ A good skill should be:
 * Deterministic
 * Token-efficient
 
-Skillsmith is built around these principles.
+skillshilp is built around these principles and treats Agent Skills as software components rather than one-off prompts.
 
-## **What’s Included**
-
-### **`SKILL.md`**
-
-The primary meta-skill responsible for designing and generating new Agent Skills.
-
-### **`references/constraints.md`**
-
-A compact reference of the Agent Skills specification used during validation.
-
-### **`references/patterns.md`**
-
-Common architectural patterns for organizing different types of skills.
-
-### **`references/skill-smells.md`**
-
-A review checklist of common design mistakes and anti-patterns.
-
-## **Contributing**
+## Contributing
 
 Discussions, issues, suggestions, and pull requests are welcome.
 
-If you discover opportunities to improve skill architecture, progressive disclosure, or token efficiency, please open an issue or submit a pull request.
+If you discover opportunities to improve skill architecture, progressive disclosure, maintainability, or token efficiency, please open an issue or submit a pull request.

@@ -1,6 +1,6 @@
 # Constraints
 
-Use this document to validate generated skills.
+Use this document to validate updated Agent Skills.
 
 ## Directory
 
@@ -10,7 +10,11 @@ Use this document to validate generated skills.
 | | `scripts/` |
 | | `assets/` |
 
-Create optional directories only when needed.
+Preserve the existing directory structure unless a structural change provides meaningful value.
+
+Create optional directories only when they provide meaningful value.
+
+Do not introduce empty or placeholder directories.
 
 ---
 
@@ -19,27 +23,29 @@ Create optional directories only when needed.
 | Field | Required | Rules |
 |--------|----------|------|
 | `name` | ✓ | 1–64 chars, lowercase letters/numbers/hyphens, no leading/trailing/consecutive hyphens, matches directory |
-| `description` | ✓ | Explains **what** the skill does and **when** to use it (≤1024 chars) |
+| `description` | ✓ | Explains **what** the skill does, **when** it should be activated, and what distinguishes it from similar skills (≤1024 chars) |
 | `license` | | Include only if applicable |
 | `compatibility` | | Include only when environment requirements exist |
 | `metadata` | | Optional metadata |
 | `allowed-tools` | | Optional |
 
+Unless explicitly requested, preserve existing frontmatter fields that remain valid.
+
 ---
 
-## SKILL.md
+## `SKILL.md`
 
 Keep concise.
 
-Contains:
+Contains only:
 
 - activation criteria
 - workflow
-- constraints
+- critical rules
 - validation
-- references
+- references to supporting files
 
-Move detailed content elsewhere.
+Move implementation details elsewhere.
 
 ---
 
@@ -54,6 +60,8 @@ Move detailed content elsewhere.
 | Example documents | `assets/` |
 | Executable logic | `scripts/` |
 
+Do not relocate content unless doing so clearly improves maintainability or specification compliance.
+
 ---
 
 ## References
@@ -61,16 +69,19 @@ Move detailed content elsewhere.
 - Use relative paths.
 - Avoid deep reference chains.
 - Prefer multiple focused files.
+- Preserve existing references unless they are incorrect or obsolete.
 
 ---
 
-## Validation
+## Validation Checklist
 
 Before returning:
 
 - ✓ Valid frontmatter
 - ✓ Directory matches `name`
-- ✓ Useful description
+- ✓ Searchable description
 - ✓ Correct file placement
+- ✓ Single responsibility
 - ✓ No duplicate documentation
 - ✓ Progressive disclosure
+- ✓ Existing behaviour preserved unless intentionally changed
