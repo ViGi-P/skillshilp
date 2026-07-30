@@ -25,6 +25,7 @@ Rather than simply generating `SKILL.md` files, skillshilp applies proven softwa
 * 📦 Encourage modular architecture and progressive disclosure
 * 🔍 Detect common design issues and architectural anti-patterns
 * 📚 Include concise reference material for validation and best practices
+* 🧪 Provide lightweight portable Bash validation for basic skill structure
 * ⚡ Optimized for low token usage without sacrificing capability
 
 ## Included Skills
@@ -76,6 +77,8 @@ skillshilp/
     ├── skillshilp-create/
     │   ├── SKILL.md
     │   ├── README.md
+    │   ├── scripts/
+    │   │   └── validate-skill.sh
     │   └── references/
     │       ├── constraints.md
     │       ├── patterns.md
@@ -84,6 +87,8 @@ skillshilp/
     └── skillshilp-edit/
         ├── SKILL.md
         ├── README.md
+        ├── scripts/
+        │   └── validate-skill.sh
         └── references/
             ├── constraints.md
             ├── patterns.md
