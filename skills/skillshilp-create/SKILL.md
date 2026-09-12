@@ -5,7 +5,7 @@ license: MIT
 metadata:
   author: Vignesh Prasad
   github: https://github.com/ViGi-P/skillshilp
-  version: "2.1.0"
+  version: "2.1.1"
   purpose: meta-skill
 ---
 
