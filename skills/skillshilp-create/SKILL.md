@@ -104,6 +104,14 @@ skill-name/
 └── assets/
 ```
 
+The skill directory itself is independent of the directory used by an agent or client to discover it.
+
+ For project-level skills, `.agents/skills/<skill-name>/` is a widely adopted cross-client convention, but it is not required by the Agent Skills specification. Clients may use their own discovery directories.
+
+ When creating a skill in a project, use the host/client's documented skill directory when one is provided. Do not hard-code `.agents/skills/` when the environment specifies another location.
+
+ When creating a standalone or distributable skill, create the skill directory itself and do not add a client-specific parent directory unless requested.
+
 Do not create `README.md` or other auxiliary documentation unless the user requests distribution-facing docs.
 
 Decide where each piece of information belongs.
