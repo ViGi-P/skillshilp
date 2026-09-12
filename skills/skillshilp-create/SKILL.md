@@ -90,7 +90,11 @@ Map concrete examples to reusable artifacts:
 
 Create only the directories that add value.
 
-Typical portable layout:
+### Skill Directory
+
+A skill is a directory whose required entry point is `SKILL.md`.
+
+Typical portable skill layout:
 
 ```text
 skill-name/
@@ -152,12 +156,14 @@ Do not add product-specific metadata, client configuration, or product-specific 
 
 Generate:
 
-- directory tree
+- the skill directory at the requested or host-provided destination
 - valid frontmatter
 - concise `SKILL.md`
 - supporting reference files
 - scripts when appropriate
 - assets when appropriate
+
+Do not assume that the skill repository's source directory, the skill's installation directory, and the client's discovery directory are the same location.
 
 Descriptions should clearly explain:
 
@@ -190,6 +196,8 @@ When a skill directory exists on disk, run:
 ```bash
 scripts/validate-skill.sh <skill-dir>
 ```
+
+`<skill-dir>` refers to the skill directory itself, not its parent discovery directory. For example, `.agents/skills/my-skill/` is the skill directory; `.agents/skills/` is its discovery directory.
 
 Validate against:
 
