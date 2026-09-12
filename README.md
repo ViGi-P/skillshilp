@@ -95,6 +95,31 @@ skillshilp/
             └── skill-smells.md
 ```
 
+### Source Layout vs. Skill Discovery
+
+The `skills/` directory is the canonical source and distribution directory for the skills in this repository.
+
+The Agent Skills specification defines the structure of an individual skill, not the parent directory in which skills must be stored. A skill is a directory containing `SKILL.md` and optional supporting resources.
+
+When installed into an agent project, a skill may be placed in the host's supported discovery directory. `.agents/skills/` is a widely adopted cross-client convention, so an installed skill may look like:
+
+```text
+.agents/
+└── skills/
+    └── skillshilp-create/
+        ├── SKILL.md
+        ├── references/
+        └── scripts/
+```
+
+This does not mean `.agents/skills/` is required for every Agent Skill. Individual clients may use different discovery locations.
+
+In other words:
+
+- `skills/` in this repository = source/distribution layout
+- `<skill-name>/` = the Agent Skill itself
+- `.agents/skills/` = one commonly adopted installation/discovery location
+
 ## Philosophy
 
 Every Agent Skill should strive to be:
